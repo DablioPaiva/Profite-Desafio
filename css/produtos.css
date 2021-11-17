@@ -1,0 +1,93 @@
+.produtos,
+h3 {
+    margin-left: 216px;
+}
+
+.produtos::after {
+    content: "";
+    display: block;
+    border-bottom: 5px solid $cor-detalhes-padrao;
+    width: 60px;
+    height: 10px;
+}
+
+.container {
+    width: 940px;
+    height: 407px;
+    margin-left: 170px;
+    display: flex;
+    align-items: center;
+    .anterior,
+    .next {
+        cursor: pointer;
+    }
+}
+
+.item-produto {
+    width: 216px;
+    height: 370px;
+    margin: 30px 13px;
+    h6 {
+        text-align: center;
+        color: #7a7a7a;
+        &::after {
+            content: "";
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: -15px;
+            width: 70px;
+            height: 10px;
+            background-image: url("../img-icons/favorite.png");
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+    }
+    h5 {
+        text-align: center;
+        color: $cor-detalhes-secundaria;
+        font-size: 20px;
+        margin-top: -10px;
+    }
+    p {
+        text-align: center;
+        color: #7a7a7a;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    &:hover {
+        background: #F2F2F2;
+    }
+    .invisivel {
+        display: none;
+    }
+    &:hover .invisivel {
+        display: flex;
+    }
+}
+
+.produto {
+    margin: 20px 17px;
+    img {
+        margin-top: 20px;
+    }
+    .parcela {
+        margin-top: -30px;
+    }
+    button {
+        width: 135px;
+        height: 35px;
+        font-weight: bold;
+        border-radius: 5px;
+        background: url(../img-icons/carrinho.png) no-repeat left;
+        background-position: 20px;
+        background-color: $cor-detalhes-secundaria;
+        color: #F2F2F2;
+        border: none;
+    }
+    .btn-comprar {
+        box-align: center;
+        margin-left: 23px;
+        text-indent: 20px;
+        cursor: pointer;
+    }
+}

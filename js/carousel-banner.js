@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    let speed = 3000;
+    let speed = 5000;
     let item_width = $('#itens li').outerWidth();
     let left_value = item_width * (-1);
 
