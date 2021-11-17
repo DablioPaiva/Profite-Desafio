@@ -83,3 +83,91 @@ header {
     color: #fff;
     font-size: 2.8em;
 }
+
+.container {
+    width: 940px;
+    height: 407px;
+    margin-left: 170px;
+    display: flex;
+    align-items: center;
+}
+
+.container .previous,
+.container .next {
+    cursor: pointer;
+}
+
+.produto {
+    margin: 20px 17px;
+}
+
+.produto img {
+    margin-top: 20px;
+}
+
+.produto .parcela {
+    margin-top: -30px;
+}
+
+.produto button {
+    width: 135px;
+    height: 35px;
+    font-weight: bold;
+    border-radius: 5px;
+    background: url(../img-icons/carrinho.png) no-repeat left;
+    background-position: 20px;
+    background-color: #2EC4B6;
+    color: #F2F2F2;
+    border: none;
+}
+
+.produto .btn-comprar {
+    box-align: center;
+    margin-left: 23px;
+    text-indent: 20px;
+    cursor: pointer;
+}
+
+item-produto h6 {
+    text-align: center;
+    color: #7a7a7a;
+}
+
+.item-produto h6::after {
+    content: "";
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: -15px;
+    width: 70px;
+    height: 10px;
+    background-image: url("../img-icons/favorite.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.item-produto h5 {
+    text-align: center;
+    color: #2EC4B6;
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+.item-produto p {
+    text-align: center;
+    color: #7a7a7a;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.item-produto:hover {
+    background: #F2F2F2;
+}
+
+.item-produto .invisivel {
+    display: none;
+}
+
+.item-produto:hover .invisivel {
+    display: flex;
+}
+
