@@ -1,6 +1,7 @@
-from application import ProdutoDAO
+from application.models.dao.produtoDao import ProdutoDAO
 from flask import render_template
 from application import app
+
 
 
 @app.route('/')

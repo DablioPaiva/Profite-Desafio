@@ -1,4 +1,4 @@
-from application import Produto
+from application.models.entity.produto import Produto
 import json
 from typing import List
 
