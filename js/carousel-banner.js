@@ -10,18 +10,18 @@ $(document).ready(function() {
     $('#itens ul').css({ 'left': left_value });
 
     $('#anterior').click(function() {
-        let left_intend = parseInt($('#itens ul').css('left')) + item_width;
+        let left_intend = parseInt($('#items ul').css('left')) + item_width;
         $('#itens ul').animate({ 'left': left_intend }, 400, function() {
             $('#itens li:first').before($('#itens li:last'));
-            $('#itens ul').css({ 'left': left_value });
+            $('#items ul').css({ 'left': left_value });
         });
     });
 
     $('#proximo').click(function() {
-        let left_intend = parseInt($('#itens ul').css('left')) - item_width;
+        let left_intend = parseInt($('#items ul').css('left')) - item_width;
         $('#itens ul').animate({ 'left': left_intend }, 400, function() {
             $('#itens li:last').after($('#itens li:first'));
-            $('#itens ul').css({ 'left': left_value });
+            $('#items ul').css({ 'left': left_value });
         });
     });
 

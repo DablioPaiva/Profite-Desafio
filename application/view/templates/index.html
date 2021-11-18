@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Welington Paiva">
+    <title>Profit-e</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <script src="../../../js/carousel-banner.js"></script>
+    <script src="../../../js/main.js"></script>
+</head>
+
+<body>
+<header>
+    <div id="header">
+        <img class="logotipo" src="../static/img-icons/logo.png" alt="Logotipo Profit-e">
+        <input type="text" class="pesquisar" placeholder="O que está procurando?">
+        <div class="menu">
+            <p class="area"><img src="../static/img-icons/user.png"><a href="#">Minha Conta</a></p>
+            <img class="carrinho-usuario" src="../static/img-icons/minicart.png">
+            <ul class="tradutor">
+                <li><img src="../static/img-icons/br.png" alt="pt-br"></li>
+                <li><img src="../static/img-icons/es.png" alt="es"></li>
+                <li><img src="../static/img-icons/gb.png" alt="gb"></li>
+            </ul>
+        </div>
+    </div>
+    <div id="header2">
+        <div class="menu2">
+            <div class="menu-hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <img class="logotipo" src="../static/img-icons/logo.png" alt="Logotipo">
+            <img class="carrinho" src="../static/img-icons/minicart.png">
+        </div>
+        <input type="text" class="pesquisar" placeholder="O que está procurando?">
+    </div>
+    <div id="carousel">
+        <div class="setas">
+            <img id="anterior" src="../../../carousel/carousel-header/icons/left.png" title="Anterior">
+            <img id="proximo" src="../../../carousel/carousel-header/icons/right.png" title="Próximo">
+        </div>
+        <h2 class="info">Nossa especialidade: experiência de compra.</h2>
+        <div id="itens">
+            <ul>
+                <li>
+                    <div class="item">
+                        <h2>Nossa especialidade: experiência de compra.</h2>
+                        <img src="../../../carousel/carousel-header/icons/banner.png">
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <h2>Nossa especialidade: experiência de compra.</h2>
+                        <img src="../../../carousel/carousel-header/icons/banner.png">
+                    </div>
+                </li>
+                <li>
+                    <div class="item">
+                        <h2>Nossa especialidade: experiência de compra.</h2>
+                        <img src="../../../carousel/carousel-header/icons/banner.png">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<section class="secao-produtos">
+    <h3 class="produtos">Produtos</h3>
+    <div class="container">
+        <img class="anterior" src="../static/img-icons/left-black.png" title="anterior">
+        <div class="item-produto">
+            <div class="produto">
+                <img src="../static/img-icons/tenis.png" alt="Number 0">
+                <h6>{{product.name}}</h6>
+                <p><s>de R$ {{product.oldPrice}},00</s></p>
+                <h5>por R$ {{product.price}},00</h5>
+                <p class="parcela">ou em {{product.count}}x de R$ {{product.value}}</p>
+                <div class="invisivel">
+                    <button class="btn-comprar">COMPRAR</button>
+                </div>
+            </div>
+        </div>
+        <div class="item-produto">
+            <div class="produto">
+                <img src="../static/img-icons/tenis.png" alt="TÊNIS COURO PUMA">
+                <h6>{{product.name}}</h6>
+                <p><s>de R$ {{product.oldPrice}},00</s></p>
+                <h5>por R$ {{product.price}},00</h5>
+                <p class="parcela">ou em {{product.count}}x de R$ {{product.value}}</p>
+                <div class="invisivel">
+                    <button class="btn-comprar">COMPRAR</button>
+                </div>
+            </div>
+        </div>
+        <div class="item-produto">
+            <div class="produto">
+                <img src="../static/img-icons/tenis.png" alt="TÊNIS COURO PUMA">
+                <h6>{{product.name}}</h6>
+                <p><s>de R$ {{product.oldPrice}},00</s></p>
+                <h5>por R$ {{product.price}},00</h5>
+                <p class="parcela">ou em {{product.count}}x de R$ {{product.value}}</p>
+                <div class="invisivel">
+                    <button class="btn-comprar">COMPRAR</button>
+                </div>
+            </div>
+        </div>
+        <div class="item-produto">
+            <div class="produto">
+                <img src="../static/img-icons/tenis.png" alt="TÊNIS COURO PUMA">
+                <h6>{{product.name}}</h6>
+                <p><s>de R$ {{product.oldPrice}},00</s></p>
+                <h5>por R$ {{product.price}},00</h5>
+                <p class="parcela">ou em {{product.count}}x de R$ {{product.value}}</p>
+                <div class="invisivel">
+                    <button class="btn-comprar">COMPRAR</button>
+                </div>
+            </div>
+        </div>
+
+        <img class="next" src="../static/img-icons/right-black.png " title="próxima ">
+    </div>
+</section>
+<footer>
+    <div class="rodape">
+        <h3 class="localizacao">Localização</h3>
+        <div class="location">
+            <div class="filial">
+                <div class="filial-sp">
+                    <h4>São Paulo</h4>
+                    <li>Rua do Rócio, 423/1801</li>
+                    <li>Vila Olímpia - SP</li>
+                    <li>04552-000</li>
+                    <li>+55 11 3333 3333</li>
+                </div>
+                <div class="filial-rj ">
+                    <h4>Rio de Janeiro</h4>
+                    <li>Vol. da Pátria, 301/702</li>
+                    <li>Botafogo - RJ</li>
+                    <li>22270-000</li>
+                    <li>+55 21 3333 3333</li>
+                </div>
+            </div>
+        </div>
+        <div class="contato">
+            <button class="btn-contato">ENTRE EM CONTATO</button>
+            <button class="btn-consultor">FALE COM O NOSSO<br> CONSULTOR ONLINE</button>
+        </div>
+        <div class="createdby">
+            <div class="autor">
+                <div class="profite">
+                    <p>Created by</p>
+                    <img src="../static/img-icons/logo-profite.png" alt="Logo Profit-e">
+                </div>
+                <div class="vtex">
+                    <p>Powered by</p>
+                    <img src="../static/img-icons/logo-vtex.png" alt="Logo VTEX">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
