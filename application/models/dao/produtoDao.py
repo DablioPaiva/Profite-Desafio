@@ -1,21 +1,27 @@
-from application.entity.produto import Produto
+from application import Produto
 import json
 from typing import List
 
-class ProdutoDAO:
+class ProdutoDAO():
     def listAll(self) -> List[Produto]:
         result = []
         with open('products.json', 'r') as file:
-            produto_dict_list = json.load(file)
-            for produto_dict in produto_dict_list:
-                id = produto_dict.get("id", None)
-                name = produto_dict.get("name", None)
-                image = produto_dict.get("image", None)
-                oldPrice = produto_dict.get("oldPrice", None)
-                price = produto_dict.get("price", None)
-                descricao = produto_dict.get("descricao", None)
-                count = produto_dict.get("count", None)
-                value = produto_dict.get("value", None)
-                product = Produto(id, name, image, oldPrice, price, descricao, count, value)
-                result.append(product)
+            produto_list = json.load(file)
+            result = self.dict_to_list(produto_list)
         return result
+
+    def dict_to_list(self, produto_dict):
+        resultado = []
+
+        for produto in produto_dict:
+            produtoL = Produto()
+            produtoL.setId(produto['id'])
+            produtoL.setName(produto['name'])
+            produtoL.setImage(produto['image'])
+            produtoL.setOldPrice(produto['oldPrice'])
+            produtoL.setPrice(produto['price'])
+            produtoL.setDescription(produto['description'])
+            produtoL.setCount(produto['installments']['count'])
+            produtoL.setValue(produto['installments']['value'])
+            resultado.append(produtoL)
+        return resultado

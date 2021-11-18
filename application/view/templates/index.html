@@ -74,54 +74,10 @@
     <div class="container">
         <img class="anterior" src="../static/img-icons/left-black.png" title="anterior">
         <div class="item-produto">
-            <div class="produto">
-                <img src="../static/img-icons/tenis.png" alt="Number 0">
-                <h6>{{product.name}}</h6>
-                <p><s>de R$ {{product.oldPrice}},00</s></p>
-                <h5>por R$ {{product.price}},00</h5>
-                <p class="parcela">ou em {{product.count}}x de R$ {{product.value}}</p>
-                <div class="invisivel">
-                    <button class="btn-comprar">COMPRAR</button>
-                </div>
-            </div>
+            <section id="conteudo">
+                <section id="items"></section>
+            </section>
         </div>
-        <div class="item-produto">
-            <div class="produto">
-                <img src="../static/img-icons/tenis.png" alt="TÊNIS COURO PUMA">
-                <h6>{{product.name}}</h6>
-                <p><s>de R$ {{product.oldPrice}},00</s></p>
-                <h5>por R$ {{product.price}},00</h5>
-                <p class="parcela">ou em {{product.count}}x de R$ {{product.value}}</p>
-                <div class="invisivel">
-                    <button class="btn-comprar">COMPRAR</button>
-                </div>
-            </div>
-        </div>
-        <div class="item-produto">
-            <div class="produto">
-                <img src="../static/img-icons/tenis.png" alt="TÊNIS COURO PUMA">
-                <h6>{{product.name}}</h6>
-                <p><s>de R$ {{product.oldPrice}},00</s></p>
-                <h5>por R$ {{product.price}},00</h5>
-                <p class="parcela">ou em {{product.count}}x de R$ {{product.value}}</p>
-                <div class="invisivel">
-                    <button class="btn-comprar">COMPRAR</button>
-                </div>
-            </div>
-        </div>
-        <div class="item-produto">
-            <div class="produto">
-                <img src="../static/img-icons/tenis.png" alt="TÊNIS COURO PUMA">
-                <h6>{{product.name}}</h6>
-                <p><s>de R$ {{product.oldPrice}},00</s></p>
-                <h5>por R$ {{product.price}},00</h5>
-                <p class="parcela">ou em {{product.count}}x de R$ {{product.value}}</p>
-                <div class="invisivel">
-                    <button class="btn-comprar">COMPRAR</button>
-                </div>
-            </div>
-        </div>
-
         <img class="next" src="../static/img-icons/right-black.png " title="próxima ">
     </div>
 </section>
@@ -164,5 +120,15 @@
         </div>
     </div>
 </footer>
+<script>
+    xhr = new XMLHttpRequest();
+    xhr.open("GET", "/list");
+    xhr.send(null);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            document.getElementById("items").innerHTML = xhr.response;
+        }
+    }
+</script>
 </body>
 </html>

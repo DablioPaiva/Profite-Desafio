@@ -1,10 +1,13 @@
-from application import app
+from application import ProdutoDAO
 from flask import render_template
-from application.models.dao.produtoDao import ProdutoDAO
+from application import app
 
-produto_list = ProdutoDAO().listAll()
 
-@app.route('/list', methods=['GET'])
+@app.route('/')
 def index():
-    return render_template('index.html', produto_list=produto_list)
+    return render_template("index.html")
 
+@app.route('/list')
+def listAll():
+    list_produto = ProdutoDAO().listAll()
+    return render_template("produto_list.html",list_produto=list_produto)

@@ -1,0 +1,12 @@
+{% for produto in lista_produtos %}
+<div class="produto">
+    <img src="{{ produto.image() }}">
+    <h6>{{product.name}}</h6>
+    <p><s>de R$ {{product.oldPrice}},00</s></p>
+    <h5>por R$ {{product.price}},00</h5>
+    <p class="parcela">ou em {{product.count}}x de R$ {{product.value}}</p>
+    <div class="invisivel">
+        <button class="btn-comprar">COMPRAR</button>
+    </div>
+</div>
+{% endfor %}
