@@ -1,5 +1,17 @@
-class Produto():
-    def __init__(self):
+class Product:
+    def __init__(self, id1, name, image, price, price1, description, count, value) -> object:
+        """
+
+        :param id1:
+        :param name:
+        :param image:
+        :param price:
+        :param price1:
+        :param description:
+        :param count:
+        :param value:
+        :rtype: object
+        """
         self.__id = None
         self.__name = None
         self.__image = None

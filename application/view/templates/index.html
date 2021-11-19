@@ -8,18 +8,24 @@
     <title>Profit-e</title>
 
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-    <script src="../../../js/carousel-banner.js"></script>
-    <script src="../../../js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/css/carousel.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/products.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/responsive.css">
+
 </head>
 
 <body>
 <header>
     <div id="header">
         <img class="logotipo" src="../static/img-icons/logo.png" alt="Logotipo Profit-e">
-        <input type="text" class="pesquisar" placeholder="O que está procurando?">
+        <label>
+            <input type="text" class="pesquisar" placeholder="O que está procurando?">
+        </label>
         <div class="menu">
-            <p class="area"><img src="../static/img-icons/user.png"><a href="#">Minha Conta</a></p>
-            <img class="carrinho-usuario" src="../static/img-icons/minicart.png">
+            <p class="area"><img src="../static/img-icons/user.png" alt=""><a href="#">Minha Conta</a></p>
+            <img class="carrinho-usuario" src="../static/img-icons/minicart.png" alt="">
             <ul class="tradutor">
                 <li><img src="../static/img-icons/br.png" alt="pt-br"></li>
                 <li><img src="../static/img-icons/es.png" alt="es"></li>
@@ -35,14 +41,16 @@
                 <span class="line"></span>
             </div>
             <img class="logotipo" src="../static/img-icons/logo.png" alt="Logotipo">
-            <img class="carrinho" src="../static/img-icons/minicart.png">
+            <img class="carrinho" src="../static/img-icons/minicart.png" alt="carrinho">
         </div>
-        <input type="text" class="pesquisar" placeholder="O que está procurando?">
+        <label>
+            <input type="text" class="pesquisar" placeholder="O que está procurando?">
+        </label>
     </div>
     <div id="carousel">
         <div class="setas">
-            <img id="anterior" src="../../../carousel/carousel-header/icons/left.png" title="Anterior">
-            <img id="proximo" src="../../../carousel/carousel-header/icons/right.png" title="Próximo">
+            <img id="anterior" src="../../carousel/carousel-header/icons/left.png" title="Anterior" alt="previews">
+            <img id="proximo" src="../../carousel/carousel-header/icons/right.png" title="Próximo" alt="next">
         </div>
         <h2 class="info">Nossa especialidade: experiência de compra.</h2>
         <div id="itens">
@@ -50,19 +58,19 @@
                 <li>
                     <div class="item">
                         <h2>Nossa especialidade: experiência de compra.</h2>
-                        <img src="../../../carousel/carousel-header/icons/banner.png">
+                        <img src="../../carousel/carousel-header/icons/banner.png" alt="banner">
                     </div>
                 </li>
                 <li>
                     <div class="item">
                         <h2>Nossa especialidade: experiência de compra.</h2>
-                        <img src="../../../carousel/carousel-header/icons/banner.png">
+                        <img src="../../carousel/carousel-header/icons/banner.png" alt="banner">
                     </div>
                 </li>
                 <li>
                     <div class="item">
                         <h2>Nossa especialidade: experiência de compra.</h2>
-                        <img src="../../../carousel/carousel-header/icons/banner.png">
+                        <img src="../../carousel/carousel-header/icons/banner.png" alt="banner">
                     </div>
                 </li>
             </ul>
@@ -72,13 +80,11 @@
 <section class="secao-produtos">
     <h3 class="produtos">Produtos</h3>
     <div class="container">
-        <img class="anterior" src="../static/img-icons/left-black.png" title="anterior">
-        <div class="item-produto">
-            <section id="conteudo">
-                <section id="items"></section>
-            </section>
+        <img class="anterior" src="../static/img-icons/left-black.png" title="anterior" alt="preview">
+        <div class="item-produto" id="itemProdutos">
+
         </div>
-        <img class="next" src="../static/img-icons/right-black.png " title="próxima ">
+        <img class="next" src="../static/img-icons/right-black.png " title="próxima" alt="next">
     </div>
 </section>
 <footer>
@@ -122,13 +128,15 @@
 </footer>
 <script>
     xhr = new XMLHttpRequest();
-    xhr.open("GET", "/list");
+    xhr.open('GET', '/list');
     xhr.send(null);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            document.getElementById("items").innerHTML = xhr.response;
+            document.getElementById('itemProdutos').innerHTML = xhr.response;
         }
     }
 </script>
+<script src="../../js/carousel-banner.js"></script>
+<script src="../../js/main.js"></script>
 </body>
 </html>
